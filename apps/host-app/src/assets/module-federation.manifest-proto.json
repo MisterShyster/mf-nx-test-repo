@@ -1,0 +1,10 @@
+{
+  "remote-app1": {
+    "version": "0.1.2",
+    "url": "https://example-storage.com/bundles/"
+  },
+  "remote-app2": {
+    "version": "0.1.2",
+    "url": "https://example-storage.com/bundles/"
+  }
+}
