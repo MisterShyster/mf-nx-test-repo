@@ -1,7 +1,7 @@
 name: Check Flow
 on:
   pull_request:
-    types: [opened, edited, reopened]
+    types: [ opened, edited, reopened ]
     branches:
       - 'release/**'
       - 'development'

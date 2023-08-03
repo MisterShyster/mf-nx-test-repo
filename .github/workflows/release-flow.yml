@@ -1,6 +1,7 @@
 name: Release Flow
 on:
-  push:
+  pull_request:
+    types: [ closed ]
     branches:
       - 'development'
 jobs:
