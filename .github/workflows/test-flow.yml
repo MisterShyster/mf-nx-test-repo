@@ -9,7 +9,7 @@ jobs:
       - name: Npm install
         run: npm ci
       - name: Build affected
-        run: nx affected -t build
+        run: npx nx affected -t build
   release:
     runs-on: ubuntu-latest
     needs: build
@@ -19,4 +19,4 @@ jobs:
       - name: Npm install
         run: npm ci
       - name: Create release
-        run: nx affected -t release --parallel=1
+        run: npx nx affected -t release --parallel=1
