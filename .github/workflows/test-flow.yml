@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@3  # actions by github to checkout repository
+        uses: actions/checkout@v3  # actions by github to checkout repository
       - name: Npm install
         run: npm ci
       - name: Build affected
@@ -15,7 +15,7 @@ jobs:
     needs: build
     steps:
       - name: Checkout repository
-        uses: actions/checkout@3  # actions by github to checkout repository
+        uses: actions/checkout@v3  # actions by github to checkout repository
       - name: Npm install
         run: npm ci
       - name: Create release
