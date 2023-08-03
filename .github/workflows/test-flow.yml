@@ -1,5 +1,10 @@
 name: Test Workflow
-on: push
+on:
+  pull_request:
+    types: [opened, edited, reopened]
+    branches:
+      - 'release'
+      - 'development'
 jobs:
   build:
     runs-on: ubuntu-latest
