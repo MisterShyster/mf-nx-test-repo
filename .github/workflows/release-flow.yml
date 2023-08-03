@@ -2,7 +2,7 @@ name: Release Flow
 on:
   push:
     branches:
-      - 'deployment'
+      - 'development'
 jobs:
   release-on-merge:
     if: github.event.pull_request.merged == true
