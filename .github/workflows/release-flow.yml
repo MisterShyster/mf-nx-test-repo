@@ -1,0 +1,26 @@
+name: Release Flow
+on:
+  push:
+    branches:
+      - 'deployment'
+jobs:
+  release-on-merge:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3  # actions by github to checkout repository
+        with:
+          fetch-depth: 0
+      - name: Cache npm
+        uses: actions/cache@v3
+        with:
+          path: '~/.npm'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+      - name: Derive appropriate SHAs for base and head for `nx affected`
+        uses: nrwl/nx-set-shas@v3
+      - name: Npm install
+        run: npm ci
+      - name: Create release
+        run: npx nx affected -t release --parallel=1
