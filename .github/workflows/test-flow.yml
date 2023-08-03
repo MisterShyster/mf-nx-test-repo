@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3  # actions by github to checkout repository
+        with:
+          fetch-depth: 0
       - name: Cache npm
         uses: actions/cache@v3
         with:
@@ -30,6 +32,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3  # actions by github to checkout repository
+        with:
+          fetch-depth: 0
       - name: Cache npm
         uses: actions/cache@v3
         with:
