@@ -18,6 +18,8 @@ jobs:
         with:
           path: '~/.npm'
           key: node-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Derive appropriate SHAs for base and head for `nx affected`
+        uses: nrwl/nx-set-shas@v3
       - name: Npm install
         run: npm ci
       - name: Build affected
@@ -33,6 +35,8 @@ jobs:
         with:
           path: '~/.npm'
           key: node-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Derive appropriate SHAs for base and head for `nx affected`
+        uses: nrwl/nx-set-shas@v3
       - name: Npm install
         run: npm ci
       - name: Create release
