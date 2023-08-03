@@ -3,8 +3,10 @@ on:
   pull_request:
     types: [opened, edited, reopened]
     branches:
-      - 'release'
+      - 'release/**'
       - 'development'
+    paths-ignore:
+      - '.github/workflows/*'
 jobs:
   build:
     runs-on: ubuntu-latest
