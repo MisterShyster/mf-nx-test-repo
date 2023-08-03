@@ -13,6 +13,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3  # actions by github to checkout repository
+      - name: Cache npm
+        uses: actions/cache@v3
+        with:
+          path: '~/.npm'
+          key: node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Npm install
         run: npm ci
       - name: Build affected
@@ -23,6 +28,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3  # actions by github to checkout repository
+      - name: Cache npm
+        uses: actions/cache@v3
+        with:
+          path: '~/.npm'
+          key: node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Npm install
         run: npm ci
       - name: Create release
