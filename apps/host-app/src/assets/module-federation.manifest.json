@@ -1,0 +1,4 @@
+{
+  "remote-app1": "http://localhost:3030/remote-app1/0.0.1",
+  "remote-app2": "http://localhost:3030/remote-app2/0.0.2"
+}
