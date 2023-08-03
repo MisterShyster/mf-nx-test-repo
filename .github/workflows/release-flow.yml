@@ -1,12 +1,11 @@
 name: Release Flow
 on:
-  pull_request:
-    types: [ closed ]
+  push:
     branches:
       - 'development'
 jobs:
   release-on-merge:
-    if: github.event.pull_request.merged == true
+    # if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     # needs: build
     steps:
