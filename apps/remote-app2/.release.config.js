@@ -32,5 +32,6 @@ module.exports = {
           `chore(release): ${name} \${nextRelease.version} [skip ci]\n\n\${nextRelease.notes}`,
       },
     ],
+    '@semantic-release/github', // Bitbucket doesn't offer an API to make releases.
   ],
 };
