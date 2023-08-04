@@ -21,6 +21,8 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
       - name: Derive appropriate SHAs for base and head for `nx affected`
         uses: nrwl/nx-set-shas@v3
+        with:
+          main-branch-name: 'development'
       - name: Npm install
         run: npm ci
       - name: Create release
