@@ -9,6 +9,7 @@ const StyledApp = styled.div`
 export function App() {
   return (
     <StyledApp>
+      <h1>App2</h1>
       <NxWelcome title="remote-app2" />
     </StyledApp>
   );
