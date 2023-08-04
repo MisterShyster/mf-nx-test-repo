@@ -5,9 +5,9 @@ module.exports = {
   name: name,
   branches: ['release'],
   pkgRoot: `dist/${path}`,
-  tagFormat: '${version}',
+  tagFormat: `${name}-v\${version}`,
   commitPaths: [`${path}/*`],
-  assets: [`${path}/README.md`, `${path}/CHANGELOG.md`],
+  assets: [`${path}/CHANGELOG.md`],
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
