@@ -26,7 +26,7 @@ jobs:
       - name: Npm install
         run: npm ci
       - name: Build realise bundle
-        run: npm nx affected -t build
+        run: npx nx affected -t build
       - name: Create release
         run: npx nx affected -t release --branches=development --parallel=1
       - name: Upload bundle artifact
