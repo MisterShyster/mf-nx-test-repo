@@ -25,7 +25,14 @@ jobs:
           main-branch-name: 'development'
       - name: Npm install
         run: npm ci
+      - name: Build realise bundle
+        run: npm nx affected -t build
       - name: Create release
         run: npx nx affected -t release --branches=development --parallel=1
+      - name: Upload bundle artifact
+        uses: actions/upload-artifact@v3
+        with:
+          path: 'dist'
+          name: ${{ env.name }}-artifact
 env:
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
