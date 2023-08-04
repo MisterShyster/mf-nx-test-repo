@@ -23,7 +23,7 @@ module.exports = {
       {
         prepareCmd: [
           `VERSION=\${nextRelease.version} && echo $VERSION > ${path}/.version`,
-          `mv ${path}/.version dist/${path}`,
+          `cp ${path}/.version dist/${path}/`,
         ].join(" && "),
       },
     ],
