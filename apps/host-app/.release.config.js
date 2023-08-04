@@ -1,4 +1,4 @@
-const name = 'remote-app1';
+const name = 'host-app';
 const path = `apps/${name}`;
 
 module.exports = {
