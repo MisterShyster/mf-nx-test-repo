@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/MisterShyster/mf-nx-test-repo/compare/1.0.0...1.1.0) (2023-08-04)
+
+
+### Features
+
+* **remote-app1:** App changed, again with ! ([3d7bcb7](https://github.com/MisterShyster/mf-nx-test-repo/commit/3d7bcb7db702202e1c1080d3c1ac573d811b4932))
+
 # 1.0.0 (2023-08-04)
 
 
