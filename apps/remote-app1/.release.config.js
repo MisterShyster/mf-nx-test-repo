@@ -21,7 +21,11 @@ module.exports = {
     [
       '@semantic-release/exec',
       {
-        prepareCmd: `VERSION=\${nextRelease.version} && echo $VERSION > ${path}/.version`,
+        prepareCmd: [
+          `VERSION=\${nextRelease.version} && echo $VERSION > ${path}/.version`,
+          `ls`,
+          `ls ~`
+        ].join(" && "),
       },
     ],
     [
