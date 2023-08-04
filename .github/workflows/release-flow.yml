@@ -24,4 +24,4 @@ jobs:
       - name: Npm install
         run: npm ci
       - name: Create release
-        run: npx nx affected -t release --parallel=1
+        run: npx nx affected -t release --branches=development --parallel=1
