@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/MisterShyster/mf-nx-test-repo/compare/remote-app1-v1.0.0...remote-app1-v1.1.0) (2023-08-04)
+
+
+### Features
+
+* **remote-app2:** add H1 ([e848189](https://github.com/MisterShyster/mf-nx-test-repo/commit/e848189ac1077f668b1a92410bab264925792da9))
+
 # 1.0.0 (2023-08-04)
 
 
