@@ -10,7 +10,14 @@ module.exports = {
   assets: [`${path}/CHANGELOG.md`],
   plugins: [
     '@semantic-release/commit-analyzer',
-    '@semantic-release/release-notes-generator',
+    [
+      '@semantic-release/release-notes-generator',
+      {
+        writerOpts: {
+          scope: `${name}`
+        }
+      }
+    ],
     [
       '@semantic-release/changelog',
       {
