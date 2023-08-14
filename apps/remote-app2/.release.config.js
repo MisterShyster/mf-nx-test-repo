@@ -9,15 +9,18 @@ module.exports = {
   commitPaths: [`${path}/*`],
   assets: [`${path}/CHANGELOG.md`],
   plugins: [
-    '@semantic-release/commit-analyzer',
     [
-      '@semantic-release/release-notes-generator',
+      "@semantic-release/commit-analyzer",
       {
-        writerOpts: {
-          scope: `${name}`
-        }
+        releaseRules: [
+          {scope: name, breaking: true, release: "major"},
+          {scope: name, type: "feat", release: "minor"},
+          {scope: name, release: "patch"},
+          {scope: "*", release: false},
+        ],
       }
     ],
+    '@semantic-release/release-notes-generator',
     [
       '@semantic-release/changelog',
       {
