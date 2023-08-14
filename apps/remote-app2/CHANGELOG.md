@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/MisterShyster/mf-nx-test-repo/compare/remote-app2-v1.0.0...remote-app2-v1.1.0) (2023-08-14)
+
+
+### Features
+
+* **remote-app2:** Created Element (4) ([d990abf](https://github.com/MisterShyster/mf-nx-test-repo/commit/d990abf3a7d909264aa6aba1c650a6c275b02344))
+
 # 1.0.0 (2023-08-14)
 
 
