@@ -34,12 +34,6 @@
           "codeCoverage": true
         }
       }
-    },
-    "release": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "echo 'skip version generation'"
-      }
     }
   },
   "tags": []

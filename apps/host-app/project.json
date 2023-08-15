@@ -107,12 +107,6 @@
           "node tools/scripts/make-affected-manifest.mjs"
         ]
       }
-    },
-    "release": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "npx semantic-release --extends=./apps/host-app/.release.config.js --branches={args.branches}"
-      }
     }
   },
   "tags": []

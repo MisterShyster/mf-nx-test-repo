@@ -102,12 +102,6 @@
           "codeCoverage": true
         }
       }
-    },
-    "release": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "npx semantic-release --extends=./apps/remote-app1/.release.config.js --branches={args.branches}"
-      }
     }
   },
   "tags": []
