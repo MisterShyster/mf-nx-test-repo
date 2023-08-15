@@ -13,7 +13,7 @@ module.exports = {
       "@semantic-release/commit-analyzer",
       {
         releaseRules: [
-          {scope: `!${name}`, release: false},
+          {scope: `*`, release: false},
           {scope: `${name}`, breaking: true, release: "major"},
           {scope: `${name}`, type: "feat", release: "minor"},
           {scope: `${name}`, release: "patch"},
