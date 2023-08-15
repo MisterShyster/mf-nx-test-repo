@@ -28,11 +28,16 @@ jobs:
       - name: Build release bundle
         run: npx nx affected -t build
       - name: Create release
-        run: npx nx affected -t release --branches=development --parallel=1
+        run: npx nx affected --base=development --target=version --parallel=1
+      - name: Tag last-release
+        shell: bash
+        run: |
+          git tag -f last-release
+          git push origin development --force
       - name: Upload release bundle artifact
         uses: actions/upload-artifact@v3
         with:
           path: 'dist'
           name: artifact # we can use env variables here
 env:
-  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
