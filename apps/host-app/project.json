@@ -103,9 +103,14 @@
     "make-affected-manifest": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": [
-          "node tools/scripts/make-affected-manifest.mjs"
-        ]
+        "commands": ["node tools/scripts/make-affected-manifest.mjs"]
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional",
+        "commitMessageFormat": "chore(${projectName}): release version ${version} [skip ci]"
       }
     }
   },
