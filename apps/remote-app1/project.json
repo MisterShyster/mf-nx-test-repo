@@ -107,7 +107,15 @@
       "executor": "@jscutlery/semver:version",
       "options": {
         "preset": "conventional",
-        "commitMessageFormat": "chore(${projectName}): release version ${version} [skip ci]"
+        "commitMessageFormat": "chore(${projectName}): release version ${version} [skip ci]",
+        "postTargets": ["remote-app1:github"]
+      }
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}"
       }
     }
   },
