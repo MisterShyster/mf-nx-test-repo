@@ -106,7 +106,8 @@
     "release": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "npx semantic-release --extends=./apps/remote-app2/.release.config.js --branches={args.branches}"
+        "command": "npx npx semantic-release-plus --extends=./apps/remote-app2/.release.config.js --branches={args.branches}",
+        "parallel": false
       }
     }
   },
