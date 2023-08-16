@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/MisterShyster/mf-nx-test-repo/compare/remote-app1-0.1.0...remote-app1-0.2.0) (2023-08-16)
+
+
+### Features
+
+* **remote-app1:** commit 2 ([fd8a41a](https://github.com/MisterShyster/mf-nx-test-repo/commit/fd8a41a27ab65b4046213eb3b1e06436751db699))
+
 ## 0.1.0 (2023-08-16)
 
 
