@@ -37,7 +37,7 @@ jobs:
         shell: bash
         run: |
           git tag -f last-release
-          git push origin last-release
+          git push origin --tags
           git push origin development --force
       - name: Upload release bundle artifact
         uses: actions/upload-artifact@v3
